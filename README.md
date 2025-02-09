@@ -55,7 +55,7 @@ To set up the environment, follow these steps:
 2. Ensure you have Python 3.8+ and install the required packages:
 
    ```sh
-   pip install tensorflow spacy numpy pandas scikit-learn flask
+   pip install tensorflow spacy numpy pandas scikit-learn streamlit
    ```
 
 3. Run the dataset preprocessing script (`data.ipynb`) to prepare the training data.
