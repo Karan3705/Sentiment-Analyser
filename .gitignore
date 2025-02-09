@@ -1,4 +1,4 @@
 Reviews.csv
-main.ipynb
-server/model_and_cv.pkl
-server/app.py
+text_with_vectors.csv
+text_with_vectors_2.csv
+modelv0.0.h5
