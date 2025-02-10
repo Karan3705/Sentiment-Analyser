@@ -58,7 +58,7 @@ To set up the environment, follow these steps:
    pip install tensorflow spacy numpy pandas scikit-learn streamlit
    ```
 
-3 Download the spacy pretrained model
+3. Download the spacy pretrained model
    ```sh
    python -m spacy download en_core_web_lg
    ```
