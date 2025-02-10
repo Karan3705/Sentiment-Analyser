@@ -58,21 +58,25 @@ To set up the environment, follow these steps:
    pip install tensorflow spacy numpy pandas scikit-learn streamlit
    ```
 
-3. Run the dataset preprocessing script (`data.ipynb`) to prepare the training data.
+3 Download the spacy pretrained model
+   ```sh
+   python -m spacy download en_core_web_lg
+   ```
+4. Run the dataset preprocessing script (`data.ipynb`) to prepare the training data.
 
-4. Train the model using:
+5. Train the model using:
 
    ```sh
    jupyter notebook model_main.ipynb
    ```
 
-5. Test the trained model with:
+6. Test the trained model with:
 
    ```sh
    jupyter notebook test.ipynb
    ```
 
-6. Run the application using `manage.py`:
+7. Run the application using `manage.py`:
 
    ```sh
    cd server
@@ -85,7 +89,7 @@ After installing the necessary dependencies, you can directly run the project us
 
 ```sh
 cd server
-python manage.py runserver
+python streamlit run manage.py 
 ```
 
 This approach is useful if you want to use the trained model for inference without retraining.
