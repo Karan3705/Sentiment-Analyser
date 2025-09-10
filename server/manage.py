@@ -4,7 +4,7 @@ import spacy
 import tensorflow as tf
 
 
-model=tf.keras.models.load_model("modelv0.0.h5")
+model=tf.keras.models.load_model("server/modelv0.0.h5")
 
 # Load the model once to avoid reloading every function call
 nlp = spacy.load("en_core_web_lg", disable=["parser", "ner"])
