@@ -6,8 +6,14 @@ import tensorflow as tf
 
 model=tf.keras.models.load_model("server/modelv0.0.h5")
 
+
 # Load the model once to avoid reloading every function call
-nlp = spacy.load("en_core_web_lg", disable=["parser", "ner"])
+try:
+    nlp = spacy.load("en_core_web_lg", disable=["parser", "ner"])
+except OSError:
+    import subprocess
+    subprocess.run(["python", "-m", "spacy", "download", "en_core_web_lg"])
+    nlp = spacy.load("en_core_web_lg", disable=["parser", "ner"])
 
 def get_review_vector(review):
     doc = nlp(review)  # Process single text, not using `pipe`
